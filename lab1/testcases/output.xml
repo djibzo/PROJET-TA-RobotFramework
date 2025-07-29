@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.11.3 on win32)" generated="2025-07-28T23:09:35.055893" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA\lab1\testcases\tests.robot">
+<test id="s1-t1" name="Create Product - Valid" line="6">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.302846" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.302846" elapsed="0.000000">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.303844" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.303844" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.300842" elapsed="0.003002">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Insert Product DB" owner="resources">
+<var>${id}</var>
+<arg>${conn}</arg>
+<arg>${valid_product}</arg>
+<status status="NOT RUN" start="2025-07-28T23:09:35.303844" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${id}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.304839" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.298841" elapsed="0.005998">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<test id="s1-t2" name="Create Product - Missing Title (Invalid)" line="11">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.308843" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.308843" elapsed="0.000000">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.308843" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.308843" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.306842" elapsed="0.002001">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<arg>*</arg>
+<arg>Insert Product DB</arg>
+<arg>${conn}</arg>
+<arg>${invalid_product_missing_title}</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.309842" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.306354" elapsed="0.004495">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<test id="s1-t3" name="Create Product - Price Not Number (Invalid)" line="15">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.317842" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.317842" elapsed="0.000000">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.317842" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.317842" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.314843" elapsed="0.002999">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<arg>*Price must be a number*</arg>
+<arg>Insert Product DB</arg>
+<arg>${conn}</arg>
+<arg>${invalid_product_price_string}</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.318841" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.313841" elapsed="0.005000">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<test id="s1-t4" name="Read Product - Valid" line="19">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.328992" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.328992" elapsed="0.000000">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.329933" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.329933" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.325841" elapsed="0.004092">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Find Product By Title DB" owner="resources">
+<var>${product}</var>
+<arg>${conn}</arg>
+<arg>${valid_product['title']}</arg>
+<status status="NOT RUN" start="2025-07-28T23:09:35.330932" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${product['title']}</arg>
+<arg>${valid_product['title']}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.331933" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.324843" elapsed="0.008107">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<test id="s1-t5" name="Read Product - Non-existent (Invalid)" line="24">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.336931" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.336931" elapsed="0.000000">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.336931" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.336931" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.335934" elapsed="0.000997">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Find Product By Title DB" owner="resources">
+<var>${product}</var>
+<arg>${conn}</arg>
+<arg>NotExists123</arg>
+<status status="NOT RUN" start="2025-07-28T23:09:35.337931" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${product}</arg>
+<arg>${None}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.337931" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.334802" elapsed="0.003129">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<test id="s1-t6" name="Update Product - Valid" line="29">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.341672" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.341672" elapsed="0.000000">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.341672" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.341672" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.340297" elapsed="0.001375">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Update Product Price DB" owner="resources">
+<var>${count}</var>
+<arg>${conn}</arg>
+<arg>${valid_product['title']}</arg>
+<arg>29.99</arg>
+<status status="NOT RUN" start="2025-07-28T23:09:35.342673" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${count}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.342673" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.339663" elapsed="0.003010">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<test id="s1-t7" name="Update Product - Invalid Title" line="34">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.351359" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.350672" elapsed="0.000687">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.351674" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.351674" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.348676" elapsed="0.002998">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Update Product Price DB" owner="resources">
+<var>${count}</var>
+<arg>${conn}</arg>
+<arg>InvalidTitle</arg>
+<arg>39.99</arg>
+<status status="NOT RUN" start="2025-07-28T23:09:35.351674" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${count}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.352673" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.346825" elapsed="0.005848">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<test id="s1-t8" name="Delete Product - Valid" line="39">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.356671" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.356671" elapsed="0.000000">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.356671" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.356671" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.354673" elapsed="0.001998">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Delete Product By Title DB" owner="resources">
+<var>${count}</var>
+<arg>${conn}</arg>
+<arg>${valid_product['title']}</arg>
+<status status="NOT RUN" start="2025-07-28T23:09:35.357672" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${count}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.357672" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.353673" elapsed="0.003999">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<test id="s1-t9" name="Delete Product - Already Deleted" line="44">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo">
+<msg time="2025-07-28T23:09:35.362538" level="FAIL">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.362538" elapsed="0.000958">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.363496" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="NOT RUN" start="2025-07-28T23:09:35.363496" elapsed="0.000000"/>
+</return>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="FAIL" start="2025-07-28T23:09:35.359846" elapsed="0.003650">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</kw>
+<kw name="Delete Product By Title DB" owner="resources">
+<var>${count}</var>
+<arg>${conn}</arg>
+<arg>${valid_product['title']}</arg>
+<status status="NOT RUN" start="2025-07-28T23:09:35.364493" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${count}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-28T23:09:35.365492" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-07-28T23:09:35.358672" elapsed="0.007819">No keyword with name 'Connect To Mongo' found. Did you mean:
+    resources.Connect To MongoDB</status>
+</test>
+<status status="FAIL" start="2025-07-28T23:09:35.058855" elapsed="0.310843"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="9" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="9" skip="0">Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-28T23:09:35.292039" level="ERROR">Error in file 'C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA\lab1\resources\resources.robot' on line 2: Importing library 'C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA\lab1\resources\mongo_helper.py' failed: ImportError: cannot import name 'SON' from 'bson' (C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\bson\__init__.py)
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA\lab1\resources\mongo_helper.py", line 1, in &lt;module&gt;
+    from pymongo import MongoClient
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymongo\__init__.py", line 91, in &lt;module&gt;
+    from pymongo.asynchronous.mongo_client import AsyncMongoClient
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymongo\asynchronous\mongo_client.py", line 64, in &lt;module&gt;
+    from pymongo import _csot, common, helpers_shared, periodic_executor
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymongo\common.py", line 39, in &lt;module&gt;
+    from bson import SON
+PYTHONPATH:
+  C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA\lab1\resources
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python311
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>
