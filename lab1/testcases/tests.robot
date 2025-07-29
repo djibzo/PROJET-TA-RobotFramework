@@ -26,6 +26,11 @@ Read Product - Non-existent (Invalid)
     ${product}=    Find Product By Title DB   ${conn}    NotExists123
     Should Be Equal    ${product}    ${None}
 
+Read Product - Empty (Invalid)
+    ${conn}=    Connect To MongoDB    ${MONGO_URI}    ${DB_NAME}    ${COLLECTION_PRODUCTS}
+    ${product}=    Find Product By Title DB    ${conn}    ${EMPTY}
+    Should Be Equal    ${product}    ${None}
+
 Update Product - Valid
     ${conn}=    Connect To MongoDB    ${MONGO_URI}    ${DB_NAME}    ${COLLECTION_PRODUCTS}
     ${count}=    Update Product Price DB    ${conn}    ${valid_product['title']}    29.99
@@ -36,6 +41,10 @@ Update Product - Invalid Title
     ${count}=    Update Product Price DB    ${conn}    InvalidTitle    39.99
     Should Be Equal As Integers    ${count}    0
 
+Update Product - Invalid Price Type
+    ${conn}=    Connect To MongoDB    ${MONGO_URI}    ${DB_NAME}    ${COLLECTION_PRODUCTS}
+    Run Keyword And Expect Error    *must be a number*    Update Product Price DB    ${conn}    ${valid_product['title']}    abc    
+
 Delete Product - Valid
     ${conn}=    Connect To MongoDB    ${MONGO_URI}    ${DB_NAME}    ${COLLECTION_PRODUCTS}
     ${count}=    Delete Product By Title DB   ${conn}    ${valid_product['title']}
@@ -44,4 +53,9 @@ Delete Product - Valid
 Delete Product - Already Deleted
     ${conn}=    Connect To MongoDB    ${MONGO_URI}    ${DB_NAME}    ${COLLECTION_PRODUCTS}
     ${count}=    Delete Product By Title DB    ${conn}    ${valid_product['title']}
+    Should Be Equal As Integers    ${count}    0
+
+Delete Product - Empty Title
+    ${conn}=    Connect To MongoDB    ${MONGO_URI}    ${DB_NAME}    ${COLLECTION_PRODUCTS}
+    ${count}=    Delete Product By Title DB    ${conn}    ${EMPTY}
     Should Be Equal As Integers    ${count}    0

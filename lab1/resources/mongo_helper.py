@@ -43,6 +43,8 @@ def find_product_by_title(conn, title):
 
 @keyword
 def update_product_price(conn, title, new_price):
+    if not isinstance(new_price, (int, float)):
+        raise ValueError("Price must be a number.")
     result = conn["collection"].update_one({"title": title}, {"$set": {"price": new_price}})
     return result.modified_count
 
