@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.11.3 on win32)" generated="2025-08-03T14:46:58.265123" rpa="false" schemaversion="5">
+<suite id="s1" name="EXAM QA" source="C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA">
+<suite id="s1-s1" name="Lab3" source="C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA\lab3">
+<suite id="s1-s1-s1" name="Testcases" source="C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA\lab3\testcases">
+<suite id="s1-s1-s1-s1" name="Tests" source="C:\Users\hp\Desktop\MIGL 2024-2025\QA TEST\EXAM QA\lab3\testcases\tests.robot">
+<kw name="Create Session To Ebay API" owner="resources" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-08-03T14:46:58.719515" level="INFO">Creating Session using : alias=ebay, url=https://api.sandbox.ebay.com/, headers={'Content-Type': 'application/json', 'Authorization': 'Bearer v^1.1#i^1#I^3#f^0#r^0#p^3#t^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'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>ebay</arg>
+<arg>${BASE_URL}</arg>
+<arg>${HEADERS}</arg>
+<arg>verify=false</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-08-03T14:46:58.718516" elapsed="0.002001"/>
+</kw>
+<doc>Create a session to the eBay API with the base URL and headers</doc>
+<status status="PASS" start="2025-08-03T14:46:58.715325" elapsed="0.006195"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Get Shipping Fulfillments No Pass" line="10">
+<kw name="Get Shipping Fulfilments No Pass" owner="resources">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-08-03T14:46:59.861100" level="INFO">GET Request : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/00000/shipping_fulfillment 
+ path_url=/sell/fulfillment/v1/order/00000/shipping_fulfillment 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer v^1.1#i^1#I^3#f^0#r^0#p^3#t^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'} 
+ body=None 
+ </msg>
+<msg time="2025-08-03T14:46:59.861645" level="INFO">GET Response : url=https://api.sandbox.ebay.com/sell/fulfillment/v1/order/00000/shipping_fulfillment 
+ status=400, reason=Bad Request 
+ headers={'rlogid': 't6pithqauq%60fiiw%28ufmadh%7B%3F%3Ctowiugvpd%60jhs.vgiggi%7F.01d73ece%3Ce*gu4j4-1987066794a-0x235a', 'x-ebay-client-tls-version': 'TLSv1.3', 'x-content-type-options': 'nosniff', 'x-xss-protection': '0', 'cache-control': 'no-cache, no-store, max-age=0, must-revalidate', 'pragma': 'no-cache', 'expires': '0', 'x-frame-options': 'DENY', 'content-type': 'application/json', 'content-length': '166', 'date': 'Sun, 03 Aug 2025 14:47:00 GMT', 'x-envoy-upstream-service-time': '45', 'server': 'ebay-proxy-server', 'strict-transport-security': 'max-age=31536000', 'x-ebay-pop-id': 'UFES2-LVSAZ01-apisandbox'} 
+ body={"errors":[{"errorId":32100,"domain":"API_FULFILLMENT","category":"REQUEST","message":"Invalid Order Id: '00000'","parameters":[{"name":"orderId","value":"00000"}]}]} 
+ </msg>
+<msg time="2025-08-03T14:46:59.862187" level="INFO">C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.sandbox.ebay.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-08-03T14:46:59.867721" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<var>${response}</var>
+<arg>ebay</arg>
+<arg>/sell/fulfillment/v1/order/${wrong_order_id}/shipping_fulfillment</arg>
+<arg>expected_status=400</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-08-03T14:46:58.728516" elapsed="1.139789"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-08-03T14:46:59.870817" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-08-03T14:46:59.868305" elapsed="0.002512"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-03T14:46:59.870817" elapsed="0.001987"/>
+</kw>
+<doc>Get the shipping fulfillments from eBay API ( unsuccessful case )</doc>
+<status status="PASS" start="2025-08-03T14:46:58.727514" elapsed="1.146292"/>
+</kw>
+<doc>Test pour avoir les details d'expeditions (cas non passant)</doc>
+<status status="PASS" start="2025-08-03T14:46:58.721520" elapsed="1.152286"/>
+</test>
+<status status="PASS" start="2025-08-03T14:46:58.375078" elapsed="1.507753"/>
+</suite>
+<status status="PASS" start="2025-08-03T14:46:58.361058" elapsed="1.538468"/>
+</suite>
+<status status="PASS" start="2025-08-03T14:46:58.334120" elapsed="1.576253"/>
+</suite>
+<status status="PASS" start="2025-08-03T14:46:58.276141" elapsed="1.646184"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="EXAM QA" id="s1" pass="1" fail="0" skip="0">EXAM QA</stat>
+<stat name="Lab3" id="s1-s1" pass="1" fail="0" skip="0">EXAM QA.Lab3</stat>
+<stat name="Testcases" id="s1-s1-s1" pass="1" fail="0" skip="0">EXAM QA.Lab3.Testcases</stat>
+<stat name="Tests" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">EXAM QA.Lab3.Testcases.Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
