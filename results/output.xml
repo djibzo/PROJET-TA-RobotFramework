@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.2 on win32)" generated="2025-08-07T19:23:06.496231" rpa="false" schemaversion="5">
+<suite id="s1" name="PROJET-TA-RobotFramework" source="C:\Users\LBC\Documents\QA_TEST\PROJET-TA-RobotFramework">
+<suite id="s1-s1" name="Lab1" source="C:\Users\LBC\Documents\QA_TEST\PROJET-TA-RobotFramework\lab1">
+<suite id="s1-s1-s1" name="Testcases" source="C:\Users\LBC\Documents\QA_TEST\PROJET-TA-RobotFramework\lab1\testcases">
+<suite id="s1-s1-s1-s1" name="Tests" source="C:\Users\LBC\Documents\QA_TEST\PROJET-TA-RobotFramework\lab1\testcases\tests.robot">
+<test id="s1-s1-s1-s1-t1" name="Delete Product - Already Deleted" line="53">
+<kw name="Connect To MongoDB" owner="resources">
+<kw name="Connect To Mongo" owner="mongo_helper">
+<msg time="2025-08-07T19:23:07.050708" level="INFO">${conn} = {'client': MongoClient(host=['ac-mui8rdq-shard-00-01.fgh70ff.mongodb.net:27017', 'ac-mui8rdq-shard-00-00.fgh70ff.mongodb.net:27017', 'ac-mui8rdq-shard-00-02.fgh70ff.mongodb.net:27017'], document_class...</msg>
+<var>${conn}</var>
+<arg>${uri}</arg>
+<arg>${db}</arg>
+<arg>${collection}</arg>
+<doc>Crée un connecteur MongoDB et retourne un dictionnaire {client, db, collection}.</doc>
+<status status="PASS" start="2025-08-07T19:23:06.737675" elapsed="0.313033"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-08-07T19:23:07.053076" level="INFO">Length is 3.</msg>
+<arg>${conn}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-08-07T19:23:07.051895" elapsed="0.001181"/>
+</kw>
+<return>
+<value>${conn}</value>
+<status status="PASS" start="2025-08-07T19:23:07.053076" elapsed="0.001344"/>
+</return>
+<msg time="2025-08-07T19:23:07.054420" level="INFO">${conn} = {'client': MongoClient(host=['ac-mui8rdq-shard-00-01.fgh70ff.mongodb.net:27017', 'ac-mui8rdq-shard-00-00.fgh70ff.mongodb.net:27017', 'ac-mui8rdq-shard-00-02.fgh70ff.mongodb.net:27017'], document_class...</msg>
+<var>${conn}</var>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${COLLECTION_PRODUCTS}</arg>
+<status status="PASS" start="2025-08-07T19:23:06.737675" elapsed="0.316745"/>
+</kw>
+<kw name="Delete Product By Title DB" owner="resources">
+<kw name="Delete Product By Title" owner="mongo_helper">
+<msg time="2025-08-07T19:23:08.419300" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>${conn}</arg>
+<arg>${title}</arg>
+<status status="PASS" start="2025-08-07T19:23:07.055928" elapsed="1.364913"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-08-07T19:23:08.421865" elapsed="0.000523"/>
+</return>
+<msg time="2025-08-07T19:23:08.423422" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>${conn}</arg>
+<arg>${valid_product['title']}</arg>
+<status status="PASS" start="2025-08-07T19:23:07.054420" elapsed="1.369996"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-08-07T19:23:08.428995" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${count}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-08-07T19:23:08.425948" elapsed="0.004037"/>
+</kw>
+<status status="PASS" start="2025-08-07T19:23:06.733554" elapsed="1.698447"/>
+</test>
+<status status="PASS" start="2025-08-07T19:23:06.566172" elapsed="1.882564"/>
+</suite>
+<status status="PASS" start="2025-08-07T19:23:06.556332" elapsed="1.906369"/>
+</suite>
+<status status="PASS" start="2025-08-07T19:23:06.545925" elapsed="1.929034"/>
+</suite>
+<status status="PASS" start="2025-08-07T19:23:06.505646" elapsed="1.979185"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PROJET-TA-RobotFramework" id="s1" pass="1" fail="0" skip="0">PROJET-TA-RobotFramework</stat>
+<stat name="Lab1" id="s1-s1" pass="1" fail="0" skip="0">PROJET-TA-RobotFramework.Lab1</stat>
+<stat name="Testcases" id="s1-s1-s1" pass="1" fail="0" skip="0">PROJET-TA-RobotFramework.Lab1.Testcases</stat>
+<stat name="Tests" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">PROJET-TA-RobotFramework.Lab1.Testcases.Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

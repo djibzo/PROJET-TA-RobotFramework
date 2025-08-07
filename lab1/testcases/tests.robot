@@ -33,12 +33,12 @@ Read Product - Empty (Invalid)
 
 Update Product - Valid
     ${conn}=    Connect To MongoDB    ${MONGO_URI}    ${DB_NAME}    ${COLLECTION_PRODUCTS}
-    ${count}=    Update Product Price DB    ${conn}    ${valid_product['title']}    29.99
+    ${count}=    Update Product Price DB    ${conn}    ${valid_product['title']}    29
     Should Be Equal As Integers    ${count}    1
 
 Update Product - Invalid Title
     ${conn}=    Connect To MongoDB    ${MONGO_URI}    ${DB_NAME}    ${COLLECTION_PRODUCTS}
-    ${count}=    Update Product Price DB    ${conn}    InvalidTitle    39.99
+    ${count}=    Update Product Price DB    ${conn}    InvalidTitle    39
     Should Be Equal As Integers    ${count}    0
 
 Update Product - Invalid Price Type
